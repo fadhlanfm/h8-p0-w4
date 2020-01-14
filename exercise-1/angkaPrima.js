@@ -1,6 +1,15 @@
 function angkaPrima(angka) {
     // you can only write your code here!
-    if(angka > 0 && )
+    if(angka <= 1){
+      return false;
+    }else{
+      for(i=2;i<angka;i++){
+        if(angka % i == 0){
+          return false
+        }
+      }
+      return true;
+    }
 }
   
   // TEST CASES
