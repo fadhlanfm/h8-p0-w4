@@ -79,6 +79,7 @@ function saleCoklat(list, money) {
 		cart.push([0, list[i][0]]);
 	}
 
+	// console.log(list[0])
 	var h = 0;
 	while(money>=list[h][1]){
 		for(i=0;i<list.length;i++){
