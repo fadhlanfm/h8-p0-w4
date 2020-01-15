@@ -25,6 +25,51 @@
  * 
  */
 
+/* 
+START OF PSEUDOCODE
+
+  PROCEDURE getStudents
+    READ grades: array of integer, 
+      names: array of string
+
+    IF length of grades IS EQUAL TO zero THEN
+      PRINT 'grades should not be empty'
+      EXIT
+    ELSE IF length of names IS EQUAL TO zero THEN
+      PRINT 'names should not be empty'
+      EXIT
+    ELSE
+      SET average <= 0,
+        sum <= 0,
+        outstandingGrades <= empty array,
+        outstandingNames <= empty array
+      
+      FOR each element of grades
+        ADD selected element of grades to sum
+        SET average <= sum divided by length of grades
+      END FOR
+
+      FOR each element of grades
+        IF selected element of grades IS GREATER THAN average THEN
+          INSERT [index of selected element of grades, selected element of grades] to outstandingGrades
+        END IF
+      END FOR
+
+      FOR each element of outstandingGrades
+        FOR each element of names
+          IF first element of selected outstandingGrades IS EQUAL TO index of selected element of name THEN
+            INSERT selected element of names to outstandingNames
+          END IF
+        END FOR
+      END FOR
+
+    PRINT outstandingNames
+    EXIT
+  END PROCEDURE
+
+
+END OF PSEUDOCODE
+*/
 
 function getStudents(grades, names) {
   // Your Code here
@@ -35,28 +80,28 @@ function getStudents(grades, names) {
     return 'names should not be empty'
   }else{
     var average = 0;
-  var sum = 0;
-  var outstandingGrades = [];
-  var outstandingNames = [];
+    var sum = 0;
+    var outstandingGrades = [];
+    var outstandingNames = [];
 
-  for(i=0;i<grades.length;i++){
-    sum += grades[i];
-    average = sum / grades.length;
-  }
-
-  for(i=0;i<grades.length;i++){
-    if(grades[i]>average){
-      outstandingGrades.push([i, grades[i]]);
+    for(i=0;i<grades.length;i++){
+      sum += grades[i];
+      average = sum / grades.length;
     }
-  }
 
-  for(i=0;i<outstandingGrades.length;i++){
-    for(j=0;j<names.length;j++){
-      if(outstandingGrades[i][0]==j){
-        outstandingNames.push(names[j]);
+    for(i=0;i<grades.length;i++){
+      if(grades[i]>average){
+        outstandingGrades.push([i, grades[i]]);
       }
     }
-  }
+
+    for(i=0;i<outstandingGrades.length;i++){
+      for(j=0;j<names.length;j++){
+        if(outstandingGrades[i][0]==j){
+          outstandingNames.push(names[j]);
+        }
+      }
+    }
     return outstandingNames;
   }
 }
