@@ -1,12 +1,34 @@
 function changeMe(arr) {
     // you can only write your code here!
+    let person = [];
+    let person1 = [];
     for(i=0;i<arr.length;i++){
-        if(arr[i][3] && 2020-arr[i][3]>0){
-            console.log(`${i}. { firstName: '${arr[i][0]}', lastName: '${arr[i][1]}', gender: '${arr[i][2]}', age: '${2020-arr[i][3]}'}`)
-        }else{
-            console.log(`${i}. { firstName: '${arr[i][0]}', lastName: '${arr[i][1]}', gender: '${arr[i][2]}', age: 'Invalid birth year'}`)
-        } 
+        person.push(`${i+1}. ${arr[i][0]} ${arr[i][1]}`)
+    }
+    
+        for(j=0;j<arr.length;j++){
+            var subObj = {}
+            if(arr[j].length==4 && 2020-arr[j][3]>0){
+                subObj.firstName = arr[j][0]
+                subObj.lastName =  arr[j][1]
+                subObj.gender = arr[j][2]
+                subObj.age = 2020 - arr[j][3]
+            }else{
+                subObj.firstName = arr[j][0]
+                subObj.lastName = arr[j][1]
+                subObj.gender = arr[j][2]
+                subObj.age = 'Invalid Birth Year'
+            }
+            person1.push(subObj) 
+        }
         
+    for(i=0;i<person.length;i++){
+        for(j=0;j<person1.length;j++){
+            if(i==j){
+                console.log(person[i])
+                console.log(person1[i])
+            }
+        }
     }
   }
   
