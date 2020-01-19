@@ -38,7 +38,16 @@ function shoppingTime(memberId, money) {
         break;
     }
 
-    return `{ memberId: '${memberId}', money: '${uangAwal}', listPurchased: [ ${listPurchased} ], changeMoney: ${money}}`;
+    let checkout = {};
+
+    checkout.memberId = memberId;
+    checkout.money = uangAwal;
+    checkout.listPurchased = listPurchased;
+    checkout.changeMoney = money;
+
+
+    return checkout;
+
   }
   
   // TEST CASES
