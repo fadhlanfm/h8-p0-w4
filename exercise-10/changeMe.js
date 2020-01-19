@@ -1,6 +1,9 @@
 function changeMe(arr) {
     // you can only write your code here!
-    let person = [];
+    if(arr.length==0){
+        console.log( '""')
+    }else{
+        let person = [];
     let person1 = [];
     for(i=0;i<arr.length;i++){
         person.push(`${i+1}. ${arr[i][0]} ${arr[i][1]}`)
@@ -30,6 +33,8 @@ function changeMe(arr) {
             }
         }
     }
+    }
+    
   }
   
   // TEST CASES
