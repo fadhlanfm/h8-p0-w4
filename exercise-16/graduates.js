@@ -4,7 +4,6 @@ function graduates (students) {
   if(students.length<1){
       return output
   }else{
-      // output[students[0]['class']] = {[]}
       for(i=0;i<students.length;i++){
         if(students[i].score>75){
           output[students[i]['class']] = []

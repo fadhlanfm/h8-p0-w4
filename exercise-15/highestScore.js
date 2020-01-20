@@ -120,7 +120,12 @@ console.log(highestScore([
       name: 'Viktor',
       score: 80,
       class: 'tigers'
-    }
+    },
+    {
+        name: 'Axelsen',
+        score: 81,
+        class: 'tigers'
+      }
   ]));
   
   // {
