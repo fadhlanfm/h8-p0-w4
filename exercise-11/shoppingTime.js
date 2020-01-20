@@ -1,5 +1,12 @@
 function shoppingTime(memberId, money) {
     // you can only write your code here!
+    let listBarang = [ ['Sepatu Stacattu', 1500000],
+                       ['Baju Zoro', 500000],
+                       ['Baju H&N', 250000],
+                       ['Sweater Uniklooh', 175000],
+                       ['Casing Handphone', 50000],
+                     ];
+    
     if(!memberId){
         return 'Mohon maaf, toko X hanya berlaku untuk member saja';
     }
@@ -11,31 +18,12 @@ function shoppingTime(memberId, money) {
     let uangAwal = money;
 
     while(money>=50000){
-        if(money>=1500000){
-            money -= 1500000;
-            listPurchased.push('Sepatu Stacattu');
+        for(i=0;i<listBarang.length;i++){
+            if(money>=listBarang[i][1]){
+                money -= listBarang[i][1]
+                listPurchased.push(listBarang[i][0])
+            }
         }
-
-        if(money>=500000){
-            money -= 500000;
-            listPurchased.push('Baju Zoro');
-        }
-
-        if(money>=250000){
-            money -= 250000;
-            listPurchased.push('Baju H&N');
-        }
-
-        if(money>=175000){
-            money -= 175000;
-            listPurchased.push('Sweater Uniklooh');
-        }
-
-        if(money>=50000){
-            money -= 50000;
-            listPurchased.push('Casing Handphone');
-        }
-        break;
     }
 
     let checkout = {};
