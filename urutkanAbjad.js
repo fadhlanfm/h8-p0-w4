@@ -39,3 +39,4 @@ function urutkanAbjad(str) {
   console.log(urutkanAbjad('developer')); // 'deeeloprv'
   console.log(urutkanAbjad('software')); // 'aeforstw'
   console.log(urutkanAbjad('aegis')); // 'aegis'
+  

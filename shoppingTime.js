@@ -33,9 +33,7 @@ function shoppingTime(memberId, money) {
     checkout.listPurchased = listPurchased;
     checkout.changeMoney = money;
 
-
     return checkout;
-
   }
   
   // TEST CASES

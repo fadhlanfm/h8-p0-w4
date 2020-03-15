@@ -18,3 +18,4 @@ function angkaPrima(angka) {
   console.log(angkaPrima(6)); // false
   console.log(angkaPrima(23)); // true
   console.log(angkaPrima(33)); // false
+  

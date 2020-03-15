@@ -26,3 +26,4 @@ function checkAB(num) {
   console.log(checkAB('you are boring')); // true
   console.log(checkAB('barbarian')); // true
   console.log(checkAB('bacon and meat')); // false
+  

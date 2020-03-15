@@ -47,8 +47,6 @@ function cariModus(arr) {
     }else{
         return -1;
     }
-    
-
 }
   
   // TEST CASES
